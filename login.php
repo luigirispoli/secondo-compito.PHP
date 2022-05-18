@@ -37,7 +37,7 @@ require_once("./stile.php");
    Password <br />
    <input type="text" name="password" size="20" />
    <br />
-  <div style="position:absolute; top:75%; left:24%;">
+  <div style="position:absolute; top:80%; left:24%;">
    <input type="submit" name="invio" value="accedi">
    <input type="reset" name="reset" value="annulla">
   </div>
