@@ -75,7 +75,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 
 </form>
 
-<?php //da rivedere????
+<?php //da rivedere???
 if ((!$_SESSION['carrello'] && !$_POST['selection']) || $_POST['azzeraAcquisti']) {
    $_SESSION['carrello']=array();
    echo "<p> - carrello vuoto - </p>";
