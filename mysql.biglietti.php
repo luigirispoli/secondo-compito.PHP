@@ -46,7 +46,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
  </head>
  
  <body>
- <hr />
+ 
    <?php
     require("menu.php");
 	?>
