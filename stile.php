@@ -10,7 +10,17 @@
 	   border-color: black;\n
 	   border-style: ridge;\n
 	   padding: 30px;\n 
-	   background-color: Linen;
+	   background-color: Linen;\n
+   }
+   .tab{
+	   background-color: BurlyWood;\n
+	   font-family: Arial;\n
+	   text-transform: uppercase;\n
+	   font-size: 110%;\n
+	   border-style: ridge;\n
+	   padding: 10px;\n
+	   width: 60%;\n
+	   
    }
 \n</style>\n";
 ?>
