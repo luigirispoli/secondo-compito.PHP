@@ -80,10 +80,10 @@ if ((!$_SESSION['carrello'] && !$_POST['selection']) || $_POST['azzeraAcquisti']
    $_SESSION['carrello']=array();
    echo "<p> - carrello vuoto - </p>";
 } else {
-   //if ( $_POST['selection']) {
-     //echo "<p>inserisco".$_POST['selection']."</p>";
-    // $_SESSION['carrello'][] = $_POST['selection'];
-   //}
+   if ( $_POST['selection']) {
+     echo "<p>inserisco".$_POST['selection']."</p>";
+     $_SESSION['carrello'][] = $_POST['selection'];
+   }
    echo "<p>contenuto del carrello:</p>";
    echo "<ul>";
    foreach ($_SESSION['carrello'] as $k=>$v)
