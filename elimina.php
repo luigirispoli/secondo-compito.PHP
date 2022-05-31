@@ -1,6 +1,7 @@
 <?php
 error_reporting (E_ALL &~E_NOTICE);
-session_start();                // sempre prima di qualunque contenuto html ...
+require_once("./stile.php");
+session_start();                
 
 if (!isset($_SESSION['accessoPermesso'])) header('Location: login.php');
 ?>
@@ -13,6 +14,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 
 <head>
 <title>Eliminazione elementi</title>
+<?php echo $stile; ?>
 </head>
 
 <body>
@@ -22,14 +24,14 @@ require("menu.php");
 ?>
 <hr />
 
-<h2>eliminazione</h2>
+<h2>Scegli cosa non vuoi acquistare...</h2>
 
 <?php
 if (!$_SESSION['carrello']) {
-   echo "<p> - carrello vuoto - </p>";
+   echo "<p> <h4>!! carrello vuoto !! </h4> </p>";
 } else {
    if ( !$_POST['eliminandi']) {
-      echo "<p>seleziona quel che vuoi eliminare dal carrello:</p>";
+      echo "<p>seleziona cio che vuoi eliminare dal carrello:</p>";
    }
    else { 
      foreach ($_POST['eliminandi'] as $k=>$indiceDaEliminare)
