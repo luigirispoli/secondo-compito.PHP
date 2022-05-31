@@ -22,5 +22,15 @@
 	   width: 60%;\n
 	   
    }
+      .logout{
+	   position: absolute;\n
+	   left: 28%;\n
+	   top: 20%;\n
+	   border: 7px;\n
+	   border-color: black;\n
+	   border-style: ridge;\n
+	   padding: 10px;\n 
+	   background-color: RosyBrown;\n
+   }
 \n</style>\n";
 ?>
