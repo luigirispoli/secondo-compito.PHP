@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 
-$db_name = "LWndb";
+$db_name = "LWtdb";
 $LWuser_table_name = "LWuser";
 $LWticket_table_name = "LWticket";
 $LWabbonamenti_table_name = "LWabbonamenti";
@@ -25,11 +25,11 @@ if (isset($_POST['invio']))
         exit();
         }
 	 
-	 $utente = mysqli_fetch_array($result);  // utente1 per adesso solo un utente cioe utente1
+	 $utente = mysqli_fetch_array($result);  // utente1 
      if ($utente) {  
        session_start();
        $_SESSION['username']=$_POST['username'];
-       $_SESSION['dataLogin']=time();  // per adesso dopo da togliere???
+       $_SESSION['dataLogin']=time();  
        $_SESSION['idUtente']=$utente['userId'];
        $_SESSION['accessoPermesso']=1000;
        header('Location: inizio.php');    // pagina iniziale
