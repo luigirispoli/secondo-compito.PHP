@@ -5,7 +5,7 @@ session_start();
 
 if (!isset($_SESSION['accessoPermesso'])) header('Location: login.php');
 
-$db_name = "LWndb";
+$db_name = "LWtdb";
 $LWticket_table_name = "LWticket";
 
 //connessione al db
@@ -46,7 +46,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
  </head>
  
  <body>
- 
+
    <?php
     require("menu.php");
 	?>
@@ -75,16 +75,16 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 
 </form>
 
-<?php //da rivedere???
+<?php 
 if ((!$_SESSION['carrello'] && !$_POST['selection']) || $_POST['azzeraAcquisti']) {
-   $_SESSION['carrello']=array();
-   echo "<p> - carrello vuoto - </p>";
+   $_SESSION['carrello']= array();
+    echo "<p> <h4>!! carrello vuoto !! </h4> </p>";
 } else {
    if ( $_POST['selection']) {
-     echo "<p>inserisco".$_POST['selection']."</p>";
+    echo "<p>".$_POST['selection']." <h5>è presente ora nel carrello! </h5></p>";
      $_SESSION['carrello'][] = $_POST['selection'];
    }
-   echo "<p>contenuto del carrello:</p>";
+   echo "<p><h3>IL TUO CARRELLO:</h3></p>";
    echo "<ul>";
    foreach ($_SESSION['carrello'] as $k=>$v)
     echo "<li>[$k] $v</li>";
@@ -98,15 +98,17 @@ if ((!$_SESSION['carrello'] && !$_POST['selection']) || $_POST['azzeraAcquisti']
 <td width="50%">
 <?php
 echo "\$_SESSION:<br />";
+echo"<p> attivare </p>";
 foreach ($_SESSION as $k=>$v)
-///  echo "[$k] $v<br />";
+  //echo "[$k] $v<br />";
 ?>
 </td>
 <td width="50%">
 <?php
 echo "\$_POST:<br />";
+echo"<p> attivare </p>";
 foreach ($_POST as $k=>$v)
-  echo "[$k] $v<br />";
+  //echo "[$k] $v<br />";
 ?>
 </td>
 </tr>
