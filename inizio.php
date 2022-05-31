@@ -30,9 +30,8 @@ require("menu.php");
 <p>
 Qui potrai acquistare biglietti e abbonamenti per seguire la tua squadra del cuore...
 </p>
-<hr />
 
-<?php
+<?php  //----COOKIE-------
 //echo "\$_COOKIE: ";
 //print_r ($_COOKIE);
 //echo "<br />";
