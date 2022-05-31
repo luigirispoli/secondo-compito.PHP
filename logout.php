@@ -19,12 +19,13 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 </head>
 
 <body>
+<div class ="logout">
 <h3>
-<hr />
-grazie della visita!
-<hr />
-<li><a href="mysql.ST.login.php" alt="aa">torna a login</a></li>
-<hr />
+ Buon divertimento, speriamo che la tua squadra sarà vincente!! <br />
+ 
+ <h2 style="text-transform:uppercase;"><a href="login.php" alt="aa">Torna al login</a>
+</div>
+
 
 </body>
 </html>
