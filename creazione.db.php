@@ -14,7 +14,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 <?php
 error_reporting(E_ALL &~E_NOTICE);
 
-$db_name = "LWndb";
+$db_name = "LWtdb";
 $LWuser_table_name = "LWuser";
 $LWticket_table_name = "LWticket";
 $LWabbonamenti_table_name = "LWabbonamenti";
@@ -243,7 +243,7 @@ echo $sql;
 // popolamento tabella abbonamenti 
 
 // ABBONAMENTO1 
-$sql = "INSERT INTO LWabbonamenti_table_name
+$sql = "INSERT INTO $LWabbonamenti_table_name
 	(squadra, numPosto, classe, costoAbbonamento) VALUES
 	(\"Roma\", \"A37\", \"1\", \"500.00\")
 	";
@@ -256,9 +256,9 @@ echo $sql;
      }
 	 
 // ABBONAMENTO2 
-$sql = "INSERT INTO LWabbonamenti_table_name
+$sql = "INSERT INTO $LWabbonamenti_table_name
 	(squadra, numPosto, classe, costoAbbonamento) VALUES
-	(\"Roma\", \"B29\", \"2\", \"458.00\")
+	(\"Fiorentina\", \"B29\", \"2\", \"318.00\")
 	";
 echo $sql;
    if ($result = mysqli_query($mysqliConnection, $sql))
@@ -269,9 +269,9 @@ echo $sql;
      }
 	 
 // ABBONAMENTO3 
-$sql = "INSERT INTO LWabbonamenti_table_name
+$sql = "INSERT INTO $LWabbonamenti_table_name
 	(squadra, numPosto, classe, costoAbbonamento) VALUES
-	(\"Roma\", \"C01\", \"3\", \"311.00\")
+	(\"Lazio\", \"C01\", \"3\", \"311.00\")
 	";
 echo $sql;
    if ($result = mysqli_query($mysqliConnection, $sql))
@@ -282,7 +282,7 @@ echo $sql;
      }
 	 
 // ABBONAMENTO4 
-$sql = "INSERT INTO LWabbonamenti_table_name
+$sql = "INSERT INTO $LWabbonamenti_table_name
 	(squadra, numPosto, classe, costoAbbonamento) VALUES
 	(\"Inter\", \"D11\", \"1\", \"549.00\")
 	";
@@ -295,7 +295,7 @@ echo $sql;
      }
 
 // ABBONAMENTO5 
-$sql = "INSERT INTO LWabbonamenti_table_name
+$sql = "INSERT INTO $LWabbonamenti_table_name
 	(squadra, numPosto, classe, costoAbbonamento) VALUES
 	(\"Milan\", \"F99\", \"2\", \"499.00\")
 	";
@@ -308,7 +308,7 @@ echo $sql;
      }
 	 
 // ABBONAMENTO6
-$sql = "INSERT INTO LWabbonamenti_table_name
+$sql = "INSERT INTO $LWabbonamenti_table_name
 	(squadra, numPosto, classe, costoAbbonamento) VALUES
 	(\"Napoli\", \"A30\", \"3\", \"325.00\")
 	";
@@ -321,7 +321,7 @@ echo $sql;
      }
 
 // ABBONAMENTO7 
-$sql = "INSERT INTO LWabbonamenti_table_name
+$sql = "INSERT INTO $LWabbonamenti_table_name
 	(squadra, numPosto, classe, costoAbbonamento) VALUES
 	(\"Juventus\", \"E71\", \"1\", \"699.00\")
 	";
@@ -334,9 +334,9 @@ echo $sql;
      }
 	 
 // ABBONAMENTO8 
-$sql = "INSERT INTO LWabbonamenti_table_name
+$sql = "INSERT INTO $LWabbonamenti_table_name
 	(squadra, numPosto, classe, costoAbbonamento) VALUES
-	(\"Juventus\", \"E17\", \"2\", \"528.00\")
+	(\"Atalanta\", \"E17\", \"2\", \"407.00\")
 	";
 echo $sql;
    if ($result = mysqli_query($mysqliConnection, $sql))
