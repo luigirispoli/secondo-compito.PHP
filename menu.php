@@ -16,7 +16,7 @@
      </td>
 </tr>
 <tr> <td style="text-align: left;">
-     <a href="paga.php" alt="aa">Paga i tuoi acquisti</a>
+     <a href="paga.php" alt="aa">Paga i tuoi prodotti</a>
      </td>
 </tr>
 <tr> <td style="text-align: left;">
