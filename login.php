@@ -10,7 +10,7 @@ $LWabbonamenti_table_name = "LWabbonamenti";
 $LWstreaming_table_name = "LWstreaming";
 
 // connessione al db
-$mysqliConnection = new mysqli("localhost", "lweb36", "lweb36", $db_name);
+$mysqliConnection = new mysqli("localhost", "lwebn", "lwebn", $db_name);
 
 if (isset($_POST['invio']))         
   if (empty($_POST['username']) || empty($_POST['password']))
