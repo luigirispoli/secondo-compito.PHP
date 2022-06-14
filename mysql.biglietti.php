@@ -9,7 +9,7 @@ $db_name = "LWtdb";
 $LWticket_table_name = "LWticket";
 
 //connessione al db
-$mysqliConnection = new mysqli("localhost", "lweb36", "lweb36", $db_name);
+$mysqliConnection = new mysqli("localhost", "lwebn", "lwebn", $db_name);
 
 if (mysqli_connect_errno()) {
     printf("Abbiamo rilevato problemi con la connessione al db: %s\n", mysqli_connect_error());
