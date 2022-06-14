@@ -8,7 +8,7 @@ if (!isset($_SESSION['accessoPermesso'])) header('Location: login.php');
 $db_name = "LWtdb";
 $LWstreaming_table_name = "LWstreaming";
 //connessione al db
-$mysqliConnection = new mysqli("localhost", "lweb36", "lweb36", $db_name);
+$mysqliConnection = new mysqli("localhost", "lwebn", "lwebn", $db_name);
 
 if (mysqli_connect_errno()) {
     printf("Abbiamo rilevato problemi con la connessione al db: %s\n", mysqli_connect_error());
