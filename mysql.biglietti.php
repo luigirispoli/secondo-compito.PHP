@@ -5,12 +5,8 @@ session_start();
 
 if (!isset($_SESSION['accessoPermesso'])) header('Location: login.php');
 
-$db_name = "LWtdb";
-$LWticket_table_name = "LWticket";
-
 //connessione al db
-$mysqliConnection = new mysqli("localhost", "lwebn", "lwebn", $db_name);
-
+require_once("./connessione.php");
 if (mysqli_connect_errno()) {
     printf("Abbiamo rilevato problemi con la connessione al db: %s\n", mysqli_connect_error());
     exit();
@@ -115,7 +111,6 @@ foreach ($_POST as $k=>$v)
 </table>
  </body>
 </html>
-
 
 
 
