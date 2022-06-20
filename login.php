@@ -2,16 +2,8 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-
-$db_name = "LWtdb";
-$LWuser_table_name = "LWuser";
-$LWticket_table_name = "LWticket";
-$LWabbonamenti_table_name = "LWabbonamenti";
-$LWstreaming_table_name = "LWstreaming";
-
 // connessione al db
-$mysqliConnection = new mysqli("localhost", "lwebn", "lwebn", $db_name);
-
+require_once("./connessione.php");
 if (isset($_POST['invio']))         
   if (empty($_POST['username']) || empty($_POST['password']))
     echo "<p> <h3>Inserire i dati per accedere !!</h3> </p>";
