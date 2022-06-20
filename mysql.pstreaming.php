@@ -5,10 +5,8 @@ session_start();
 
 if (!isset($_SESSION['accessoPermesso'])) header('Location: login.php');
 
-$db_name = "LWtdb";
-$LWstreaming_table_name = "LWstreaming";
 //connessione al db
-$mysqliConnection = new mysqli("localhost", "lwebn", "lwebn", $db_name);
+require_once("./connessione.php");
 
 if (mysqli_connect_errno()) {
     printf("Abbiamo rilevato problemi con la connessione al db: %s\n", mysqli_connect_error());
@@ -69,18 +67,18 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
  <td>
   <?php echo $pstreaming;?>
  </td>
-<tr>
+</tr>
 </table>
 
 </form>
 
-<?php //da rivedere???
+<?php 
 if ((!$_SESSION['carrello'] && !$_POST['selection']) || $_POST['azzeraAcquisti']) {
    $_SESSION['carrello']=array();
     echo "<p> <h4>!! carrello vuoto !! </h4> </p>";
 } else {
    if ( $_POST['selection']) {
-     echo "<p>inserisco".$_POST['selection']."</p>";
+     echo "<p>".$_POST['selection']."<p><h5>è presente ora nel carrello! </h5></p>";
      $_SESSION['carrello'][] = $_POST['selection'];
    }
    echo "<p>IL TUO CARRELLO:</p>";
