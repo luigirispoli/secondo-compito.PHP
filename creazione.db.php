@@ -14,13 +14,13 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 <?php
 error_reporting(E_ALL &~E_NOTICE);
 
-$db_name = "LWtdb";
+$db_name = "LWttdb";
 $LWuser_table_name = "LWuser";
 $LWticket_table_name = "LWticket";
 $LWabbonamenti_table_name = "LWabbonamenti";
 $LWstreaming_table_name = "LWstreaming";
 
-$mysqliConnection = new mysqli("localhost", "lwebn", "lwebn");
+$mysqliConnection = new mysqli("localhost", "lweb36", "lweb36");
 
 if (mysqli_connect_errno()) {
     printf("Abbiamo rilevato problemi con la connessione al db: %s\n", mysqli_connect_error());
@@ -48,7 +48,7 @@ $sqlQuery = "CREATE TABLE if not exists $LWuser_table_name (";
 $sqlQuery.= "userId int NOT NULL auto_increment, primary key (userId), ";
 $sqlQuery.= "userName varchar (50) NOT NULL, ";
 $sqlQuery.= "password varchar (20) NOT NULL, ";
-$sqlQuery.= "numeroTicket int";  // Da verificare anche in login.php se è presente
+$sqlQuery.= "numeroTicket int";  
 $sqlQuery.= ");";
 
 echo "<P>$sqlQuery</P>";
